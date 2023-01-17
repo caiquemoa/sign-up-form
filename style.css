@@ -110,3 +110,30 @@ legend {
 	flex: 1;
 	padding: 20px 0 0px 42px;
 }
+
+@media only screen and (max-width: 950px) {
+	main {
+		flex-direction: column;
+	}
+	.top-paragraph {
+		padding: 42px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.banner-section {
+		min-height: 50%;
+	}
+
+	.top-paragraph {
+		padding: 42px;
+	}
+	.column-wrapper {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	form {
+		padding: 42px;
+	}
+}
