@@ -6,11 +6,14 @@ inputs.forEach((input) => {
 })
 
 function confirmPassword() {
-	if (password.value !== password_confirmation.value) {
+	if (
+		password.value !== password_confirmation.value &&
+		password_confirmation.value !== ''
+	) {
 		password_confirmation.setCustomValidity('password not matching')
 		password_confirmation.previousElementSibling.textContent =
-			'CONFIRM PASSWORD NOT MATCH'
-		password_confirmation.previousElementSibling.style.color = 'red'
+			'PASSWORD NOT MATCH'
+		password_confirmation.previousElementSibling.style.color = '#fa4d4d'
 	} else {
 		password_confirmation.setCustomValidity('')
 		password_confirmation.classList.remove('pseudo-element')
