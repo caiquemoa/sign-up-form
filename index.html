@@ -31,53 +31,66 @@
 
 					<p>You know you want to.</p>
 				</div>
-				<form action="">
+				<form action="" id="registration-form">
 					<fieldset>
-						<legend>Let's do this</legend>
+						<legend>Let's do this!</legend>
 						<div class="column-wrapper">
-							<div class="row-wrapper">
+							<div class="wrapper">
 								<label for="first_name">FIRST NAME </label>
-								<input type="text" name="first_name" id="first_name" />
+								<input type="text" name="first_name" id="first_name" required />
 							</div>
-							<div class="row-wrapper">
+							<div class="wrapper">
 								<label for="last_name">LAST NAME </label>
 								<input type="text" name="last_name" id="last_name" />
 							</div>
 						</div>
 						<div class="column-wrapper">
-							<div class="row-wrapper">
+							<div class="wrapper">
 								<label for="email">EMAIL</label>
-								<input type="email" name="email" id="email" />
+								<input type="email" name="email" id="email" required />
 							</div>
-							<div class="row-wrapper">
+							<div class="wrapper">
 								<label for="phone_number">PHONE NUMBER</label>
-								<input type="number" name="phone_number" id="phone_number" />
+								<input
+									type="number"
+									name="phone_number"
+									id="phone_number"
+									required
+								/>
 							</div>
 						</div>
 						<div class="column-wrapper">
-							<div class="row-wrapper">
+							<div class="wrapper">
 								<label for="password">PASSWORD</label>
-								<input type="password" name="password" id="password" />
+								<input
+									type="password"
+									name="password"
+									id="password"
+									data-help="deu ruim irmão"
+									required
+								/>
 							</div>
-							<div class="row-wrapper">
+							<div class="wrapper">
 								<label for="confirm_password">CONFIRM PASSWORD</label>
 								<input
 									type="password"
 									name="confirm_password"
 									id="confirm_password"
+									required
 								/>
 							</div>
 						</div>
 					</fieldset>
 				</form>
-				<div class="bottom-submit">
-					<button>Create Account</button>
+				<div class="submit-area">
+					<button type="submit" form="registration-form">Create Account</button>
 					<p>
 						Already have an account?
-						<a href="http://" rel="noopener noreferrer">Log in</a>
+						<a href="" rel="noopener noreferrer">Log in</a>
 					</p>
 				</div>
 			</section>
 		</main>
+		<script src="script.js"></script>
 	</body>
 </html>
