@@ -1,27 +1,27 @@
 const inputs = [...document.getElementsByTagName('input')]
 const password = document.getElementsByName('password')[0]
-const password_confirmation = document.getElementsByName('confirm_password')[0]
+const confirm_password = document.getElementsByName('confirm_password')[0]
 inputs.forEach((input) => {
 	input.addEventListener('invalid', () => input.classList.add('error'), false)
 })
 
 function confirmPassword() {
 	if (
-		password.value !== password_confirmation.value &&
-		password_confirmation.value !== ''
+		password.value !== confirm_password.value &&
+		confirm_password.value !== ''
 	) {
-		password_confirmation.setCustomValidity('password not matching')
-		password_confirmation.previousElementSibling.textContent =
-			'PASSWORD NOT MATCH'
-		password_confirmation.previousElementSibling.style.color = '#fa4d4d'
+		confirm_password.setCustomValidity("password doesn't matching")
+		confirm_password.previousElementSibling.textContent = 'PASSWORD NOT MATCH'
+		confirm_password.previousElementSibling.style.color = '#fa4d4d'
+		confirm_password.classList.add('error')
 	} else {
-		password_confirmation.setCustomValidity('')
-		password_confirmation.classList.remove('pseudo-element')
-		password_confirmation.previousElementSibling.textContent =
-			'CONFIRM PASSWORD'
-		password_confirmation.previousElementSibling.style.color = 'black'
+		confirm_password.setCustomValidity('')
+		confirm_password.classList.remove('pseudo-element')
+		confirm_password.previousElementSibling.textContent = 'CONFIRM PASSWORD'
+		confirm_password.previousElementSibling.style.color = 'black'
+		confirm_password.classList.remove('error')
 	}
 }
 
 password.onchange = confirmPassword
-password_confirmation.onkeyup = confirmPassword
+confirm_password.onkeyup = confirmPassword
